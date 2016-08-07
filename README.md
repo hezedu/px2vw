@@ -22,3 +22,5 @@ var px2vw = require('px2vw');
 var src = fs.readFileSync('./style.css').toString();
 fs.writeFileSync('./style_px2vw.css', px2vw(src));
 ```
+### install
+`npm install px2vw`
