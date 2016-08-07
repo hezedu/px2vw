@@ -6,8 +6,8 @@ px2vw(str, opts);
 // => str
 ```
 ### Options:
--`width`  px源文件所依据的客户端宽度(px)。默认`320`. 
--`fixed`  转成vw后，四舍五入后小数点后位数,(最大20)。默认`5`
+* `width`  px源文件所依据的客户端宽度(px)。默认`320`. 
+* `fixed`  转成vw后，四舍五入后小数点后位数,(最大20)。默认`5`
 ## example
 ```js
 var str = px2vw('3px', {width:414, fixed:8});
