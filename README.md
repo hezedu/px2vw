@@ -1,9 +1,7 @@
 # px2vw
-css's px to vw.
+css's px to vw. online edit:[https://hezedu.github.io/px2vw/](https://hezedu.github.io/px2vw/)
 
 [Switch to English README](README-en.md)
-
-[online edit]( https://hezedu.github.io/px2vw/)
 ## 用法
 ```js
 px2vw(str, opts);
