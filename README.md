@@ -1,12 +1,13 @@
 # px2vw
 css's px to vw.
-## API `px2vw(str, opts);`
-### opts:
+## 用法
+`px2vw(str, opts);`
+// => str
+
+### Options:
 ```js
-{
-  width: 320, //px源文件所依据的客户端宽度(px)。默认320. 
-  fixed: 5  //转成vw后，四舍五入后小数点后位数,(最大20)。默认5
-}
+-`width`  px源文件所依据的客户端宽度(px)。默认`320`. 
+-`fixed`  转成vw后，四舍五入后小数点后位数,(最大20)。默认`5`
 ```
 ## example
 ```js
