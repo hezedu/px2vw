@@ -1,5 +1,5 @@
 # px2vw
-css's px to vw.
+css's px to vw. online edit:https://hezedu.github.io/px2vw/
 ## Usage
 ```js
 px2vw(str, opts);
