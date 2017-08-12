@@ -2,12 +2,11 @@
 css's px to vw. online edit:https://hezedu.github.io/px2vw/
 ## Usage
 ```js
-px2vw(str, opts);
+px2vw(width, content);
 // => str
 ```
 ### Options:
-* `width`  Client width based on the source file(px)。默认`320`. 
-* `fixed`  vw's toFixed decimal digits。默认`5`
+* `width`  **Number** Client width based on the source file(px)。默认`320`. 
 
 ### Example
 ```js
