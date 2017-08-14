@@ -1,8 +1,7 @@
 var WIDTH = 320;
 //,FIXED = 5;
 
-var REG = /([1-9]\d*\.\d*|0\.\d*[1-9]\d|\d)+px/gi; //去零正则表达式
-
+var REG = /([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi; //去零正则表达式
 // function trimEnd0(str) { //去掉未尾多余的0.
 //   str = str.replace(/0+$/, '');
 //   var lastIndex = str.length - 1;
