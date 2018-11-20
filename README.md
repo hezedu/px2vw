@@ -12,4 +12,5 @@ css's px to vw. online edit:[https://hezedu.github.io/px2vw/](https://hezedu.git
 ```js
 var result = px2vw(414, '.title: height:30px; border:1px solid red;', 320);
 console.log(result);
+// .title: height:7.246376811594203vw; border:0.3125vw solid red;
 ```
