@@ -16,7 +16,7 @@
   },
   "dependencies": {
   },
-  "licenses": "MIT",
+  "license": "MIT",
   "email": "hezedu@hotmail.com",
   "description": "css's px to vw",
   "bugs": {

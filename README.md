@@ -1,4 +1,4 @@
-# px2vw
+# px2vw 1.2.2
 css's px to vw. online edit:[https://hezedu.github.io/px2vw/](https://hezedu.github.io/px2vw/)
 ### install
 `npm install px2vw`
