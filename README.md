@@ -21,5 +21,5 @@ Files in directory `./dist` can be used directly as an AMD module, or Direct <sc
 ```js
 var result = px2vw(750, '.title: height:30px; border:1px solid red;', 320);
 console.log(result);
-// .title: height:7.246376811594203vw; border:0.3125vw solid red;
+// .title: height:4vw; border:0.3125vw solid red;
 ```
