@@ -1,6 +1,6 @@
 {
   "name": "px2vw",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "px2vw.js",
   "keywords": [
     "css",
@@ -11,11 +11,14 @@
     "type": "git",
     "url": "https://github.com/hezedu/px2vw.git"
   },
+  "files": [
+    "dist",
+    "px2vw.js"
+  ],
   "author": {
     "name": "hezedu"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "license": "MIT",
   "email": "hezedu@hotmail.com",
   "description": "css's px to vw",

@@ -1,3 +1,7 @@
+/*!
+ * MIT License
+ * https://github.com/hezedu/px2vw
+ */
 var WIDTH = 320;
 
 var REG = /([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi; //去零正则表达式
