@@ -3,7 +3,7 @@ css's px to vw. online edit:[https://hezedu.github.io/px2vw/](https://hezedu.git
 ### install
 `npm install px2vw`
 
-Files in directory `./dist` can be used directly as an AMD module, or Direct <script> Include.
+Files in directory `./dist` can be used directly as an AMD module, or Direct <script> Include(px2vw will be registered as a global variable).
 
 ## API(English)
 ### px2vw(width, content[, minWidth])
