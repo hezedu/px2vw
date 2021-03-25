@@ -1,9 +1,66 @@
 /*!
- * version 1.3.1
+ * version 1.3.2
  * MIT License
  * https://github.com/hezedu/px2vw
  */
-!function(){var n=/([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi;function e(n){return n+"vw"}function r(n,e){return r=n.toFixed(e),t=(r=r.replace(/0+$/,"")).length-1,("."!==r[t]?r:r.substr(0,t))+"vw";var r,t}function t(t,u,i,f){t=t||320;var c=1/(i=i||320)*100;return u.replace(n,function(n,t,u){var i=u?r:e,f=i(t,u);return function(e){return(e=(e="."===(e=e.substr(0,e.length-2))[0]?Number("0"+e):Number(e))/n*100)<t?f:i(e,u)}}(t,c,f))}"function"==typeof define&&define.amd?define((function(){return t})):this.px2vw=t}();
+(function(){
+  //dist-wrap top
+    var WIDTH = 320;
+    
+    var REG = /([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi; //去零正则表达式
+    
+    function trimEnd0(str) { //去掉未尾多余的0.
+      str = str.replace(/0+$/, '');
+      var lastIndex = str.length - 1;
+      return str[lastIndex] !== '.' ? str : str.substr(0, lastIndex);
+    }
+    
+    function notFixedOut(num){
+      return num + 'vw';
+    }
+    function fixedOut(num, fixedNum){
+      return trimEnd0(num.toFixed(fixedNum)) + 'vw';
+    }
+    
+    function matchCtrl(width, minVw, fixedNum) {
+      var out = fixedNum ? fixedOut : notFixedOut;
+      var minVwOut = out(minVw, fixedNum);
+      return function(m) { //replace匹配字符串处理
+        m = m.substr(0, m.length - 2);
+        if(m[0] === '.'){
+          m = Number('0' + m);
+        }else{
+          m = Number(m);
+        }
+        m = (m / width) * 100;
+        if(m < minVw){
+          return minVwOut;
+        }
+        return out(m, fixedNum);
+      }
+    }
+    
+    
+    
+    function px2vw(width, str, minWidth, fixedNum) {
+      width = width || WIDTH;
+      minWidth = minWidth || WIDTH;
+      var minVw = (1 / minWidth) * 100;
+      return str.replace(REG, matchCtrl(width, minVw, fixedNum));
+    }
+    
+    //module.exports = px2vw;
+    
+  
+  //dist-wrap bottom
+    if(typeof define === 'function' && define.amd) {
+      define(function() {
+        return px2vw;
+      });
+    }else{
+      this.px2vw = px2vw;
+    }
+  })();
 
 (function() {
   
@@ -53,7 +110,6 @@
   }
 
   function handleIsFixedChange(){
-    console.log('handleIsFixedChange')
     $toFixed.disabled = $isFixed.checked ? '' : 'disabled';
   }
   handleIsFixedChange();
