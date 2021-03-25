@@ -1,12 +1,9 @@
-//****************px2vw start****************
 /*!
- * version 1.3.0
+ * version 1.3.1
  * MIT License
  * https://github.com/hezedu/px2vw
  */
-
-//****************px2vw end****************
-!function(){var n=/([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi;function e(n){return n+"vw"}function r(n,e){return r=n.toFixed(e),t=(r=r.replace(/0+$/,"")).length-1,("."!==r[t]?r:r.substr(0,t))+"vw";var r,t}function t(t,u,i,f){t=t||320;var c=1/(i=i||320)*100;return u.replace(n,function(n,t,u){f+="vw";var i=u?r:e,f=i(t,u);return function(e){return(e=(e="."===(e=e.substr(0,e.length-2))[0]?Number("0"+e):Number(e))/n*100)<t?f:i(e,u)}}(t,c,f))}"function"==typeof define&&define.amd?define((function(){return t})):this.px2vw=t}();
+!function(){var n=/([1-9]\d*\.\d*|0\.\d*[1-9]|\d)+px(?!(\s*\)))/gi;function e(n){return n+"vw"}function r(n,e){return r=n.toFixed(e),t=(r=r.replace(/0+$/,"")).length-1,("."!==r[t]?r:r.substr(0,t))+"vw";var r,t}function t(t,u,i,f){t=t||320;var c=1/(i=i||320)*100;return u.replace(n,function(n,t,u){var i=u?r:e,f=i(t,u);return function(e){return(e=(e="."===(e=e.substr(0,e.length-2))[0]?Number("0"+e):Number(e))/n*100)<t?f:i(e,u)}}(t,c,f))}"function"==typeof define&&define.amd?define((function(){return t})):this.px2vw=t}();
 
 (function() {
   

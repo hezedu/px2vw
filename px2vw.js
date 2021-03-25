@@ -1,5 +1,5 @@
 /*!
- * version 1.3.0
+ * version 1.3.1
  * MIT License
  * https://github.com/hezedu/px2vw
  */
@@ -21,8 +21,6 @@ function fixedOut(num, fixedNum){
 }
 
 function matchCtrl(width, minVw, fixedNum) {
-
-  minVwOut = minVwOut + 'vw';
   var out = fixedNum ? fixedOut : notFixedOut;
   var minVwOut = out(minVw, fixedNum);
   return function(m) { //replace匹配字符串处理

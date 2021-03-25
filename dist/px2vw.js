@@ -23,8 +23,6 @@
   }
   
   function matchCtrl(width, minVw, fixedNum) {
-  
-    minVwOut = minVwOut + 'vw';
     var out = fixedNum ? fixedOut : notFixedOut;
     var minVwOut = out(minVw, fixedNum);
     return function(m) { //replace匹配字符串处理
