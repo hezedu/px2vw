@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Px2vw by dw</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+  <div class="top">
+  <div class="author">
+  <a href="https://github.com/hezedu/px2vw"> <img  class="githublogo" src="./images/octocat-logo.png"></a>
+  </div>
+
+  <h1>Px2vw</h1>
+<div style="line-height:50px;font-size:16px;">
+
+<div style="text-align: center;">
+<label>Width:</label>
+  <input type='number' id="optWidth" class="opt_width" min="1"><span style="color:#666;"> px</span>
+  <label class="optMinWidthLabel">MinWidth:</label>
+  <input type='number' id="optMinWidth" min="1" class="opt_min_width"><span style="color:#666;"> px</span>
+  <label class="optToFixedLabel" >
+    <input type="checkbox" id="isFixed" class="toFixedCheckbox">
+    <span>toFixed:</span></label>
+  <input type='number'  min="1" id="optToFixed" disabled="disabled" class="opt_to_fixed"><span style="color:#666;"></span>
+  <button id="btn_submit">OK</button>
+</div>
+<!-- <div style="width:50%;float:left;text-align: left;padding-left:10px">
+  <label>fixed:</label>
+   <input type='number' min="0" max="20" id="optFixed" value="5">
+
+    </div> -->
+    </div>
+    </div>
+
+
+  <div class="main">
+  <div class="w50">
+<textarea id="pxText">
+@media (max-width: 768px){
+  .title{height:30px; border: 1px solid red;}
+}
+</textarea>
+  </div>
+  <div class="w50">
+  <textarea id="vwText" style="background:#ebebe4"></textarea>
+  </div>
+  </div>
+  <script src="javascripts/main.js"></script>
+  </body>
+</html>
